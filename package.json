@@ -1,0 +1,25 @@
+{
+  "name": "express-rest-api",
+  "version": "1.0.0",
+  "description": "rest api with express.js",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "author": "AG.nayanajith",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.2",
+    "mongoose": "^6.0.6",
+    "nodemon": "^2.0.12",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
