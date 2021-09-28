@@ -1,43 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/windows,vscode,webstorm,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,vscode,webstorm,node
+
 # Default ignored files
 /shelf/
 /workspace.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
-
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
-
-@ANgajasinghe
-arojayathilaka
-/
-AF-final-exam
-Public
-1
-0
-0
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-AF-final-exam/final exam/back-end/.gitignore
-@arojayathilaka
-arojayathilaka comit after project completion
-Latest commit 42a8d3f on Apr 9
- History
- 1 contributor
-268 lines (202 sloc)  4.8 KB
-
-
-# Created by https://www.toptal.com/developers/gitignore/api/windows,vscode,webstorm,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,vscode,webstorm,node
 
 ### Node ###
 # Logs
@@ -303,16 +272,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,vscode,webstorm,node
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
