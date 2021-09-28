@@ -1,23 +1,18 @@
-# express-rest-api
+# Team Management App
 
-## Team Management App
+- Leaders can create a team with multiple members.
+- Leaders can send emails and messages to their team members.
+- Leaders can view all their teams on one page, and they can view all the members by selecting a team.
+- Leaders can delete or update their team members.
 
-- Leaders can create a team with multiple number of members.
-- Leaders can send emails and messages to his team members.
-- Leaders can view his all teams in one page, and he can view all the members by selecting a team.
-- Leaders and delete or update his team members.
-
-
-#### Application Architecture
+### Application Architecture
 
 ![application architecture](https://euuxswablrvfihzxbfml.supabase.in/storage/v1/object/public/github/express-rest-api/application-architecture.png)
 
-
-#### Use Case Diagram
+### Use Case Diagram
 
 ![use case](https://euuxswablrvfihzxbfml.supabase.in/storage/v1/object/public/github/express-rest-api/use-case.png)
 
-
-#### Data Models
+### Data Models
 
 ![use case](https://euuxswablrvfihzxbfml.supabase.in/storage/v1/object/public/github/express-rest-api/data-model.png)
