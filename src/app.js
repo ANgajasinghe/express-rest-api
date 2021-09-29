@@ -3,20 +3,28 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-const path = require('path');
-const {errorLogger,errorResponder,invalidPathHandler} = require("./core/middleware");
-
-
-
+const {errorLogger, errorResponder, invalidPathHandler} = require("./core/middleware");
+const jwt = require('express-jwt');
 
 
 const app = express();
 
+app.use(jwt({secret: process.env.SECRECT, algorithms: ['HS256']})
+    .unless(
+        {
+            path: [
+                '/oauth/login',
+                '/oauth/register'
+            ]
+        }));
+
 // utils
 app.use(bodyParser.json());
 app.use(cors());
+
+
 app.use(express.urlencoded({
-    extended:true
+    extended: true
 }));
 
 // db config
@@ -36,8 +44,6 @@ app.use(express.urlencoded({
 
 const uri = process.env.MONGO_CONNECTION_STRING
 
-
-
 mongoose.connect(uri).then(() => {
     console.log(`Server is running on port`)
 }).catch((error) => {
@@ -45,10 +51,9 @@ mongoose.connect(uri).then(() => {
 })
 
 
-
 // route reg
-app.use(require('./routes/task.route'));
-app.use(require('./routes/user.route'));
+app.use('/api', require('./routes/group.route'));
+app.use('/oauth', require('./routes/user.route'));
 
 
 // middleware

@@ -6,7 +6,11 @@ const errorLogger = (err, req, res, next) => {
 const errorResponder = (err, req, res, next) => {
     res.header("Content-Type", 'application/json')
 
-    res.status(err.status).send({
+    if(err.status == null) {
+        err.status = 500;
+    }
+
+    res.status(500).send({
         message: err.message,
         status: err.status,
         name: err.name,
