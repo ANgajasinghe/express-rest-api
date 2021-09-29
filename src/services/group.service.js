@@ -1,6 +1,6 @@
 'use strict'
 
-const Group = require('../schemas/group.model');
+const Group = require('../schemas/group.schema');
 
 
 const addGroup = async (group,user) => {
