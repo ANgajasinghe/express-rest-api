@@ -8,6 +8,7 @@ const {validate} = require("../core/helpers/validation-helper");
 router.route('/register').post(validate(checkSchema(registrationSchema)),
     async (req, res, next) => {
         try {
+            console.log('callerd')
             const ret = await registerUser(req.body);
             res.json(ret);
         } catch (e) {
