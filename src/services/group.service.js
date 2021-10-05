@@ -23,16 +23,42 @@ const getById = async (groupId,user) => {
 
     const result = await Group.findById(groupId);
 
+
     if(!result)
         throw new BadRequestError('invalid group id')
 
-    if(result.userId !== user.sub)
+    if(result.userId.toString() !== user.sub)
         throw new UnauthorizedError('unauthorized leader id detected')
 
     return result;
 }
 
+const updateGroupMembers = async (group, user) => {
+    const result = await Group.findById(group._id)
 
+    if(!result)
+        throw new BadRequestError('invalid group id')
+    if(result.userId.toString() !== user.sub)
+        throw new UnauthorizedError('unauthorized leader id detected')
+
+    result.groupMembers = group.groupMembers;
+
+    await new Group(result).save();
+
+    return getByUserId(user);
+
+}
+
+const deleteGroup = async (groupId, user) => {
+
+    const group = await getById(groupId,user);
+
+    await Group.remove(group);
+
+    return getByUserId(user);
+
+
+}
 
 
 
@@ -43,5 +69,5 @@ const isUserAlreadyHaveSameNameGroup = async (name, userId) => {
 
 
 module.exports = {
-    addGroup,getAll,getByUserId,getById,isUserAlreadyHaveSameNameGroup
+    addGroup,getAll,getByUserId,getById,updateGroupMembers,deleteGroup,isUserAlreadyHaveSameNameGroup
 }
