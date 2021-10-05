@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "5578bef9-4e73-43d3-8762-5562ebd9ff7e",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"samn kumara\",\r\n   \"email\": \"samankumara@gmail.com\",\r\n   \"password\": \"#Compaq123\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/oauth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"oauth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ag.nayanajith@gmail.com\",\r\n    \"password\": \"#Compaq123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/oauth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"oauth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"group 5\",\r\n    \"description\": \"this is sample\",\r\n    \"groupMembers\": [\r\n        {\r\n            \"name\": \"saman kuamara\",\r\n            \"email\": \"saman@gmail.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all groups for a ldeader",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group-by-leader",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group-by-leader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all groups",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"group 5\",\r\n    \"description\": \"this is sample\",\r\n    \"groupMembers\": [\r\n        {\r\n            \"name\": \"saman kuamara\",\r\n            \"email\": \"saman@gmail.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Group Members",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"_id\": \"61542fd625c5fff85b02605b\",\r\n        \"name\": \"group 1\",\r\n        \"description\": \"this is sample\",\r\n        \"userId\": \"61503be7e4678519a11a3d0d\",\r\n        \"groupMembers\": [\r\n            {\r\n                \"name\": \"saman kuamara update\",\r\n                \"email\": \"saman@gmail.com\"\r\n            },\r\n            {\r\n                \"name\": \"saman kuamara\",\r\n                \"email\": \"saman@gmail.com\"\r\n            }\r\n        ],\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a group by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"group 5\",\r\n    \"description\": \"this is sample\",\r\n    \"groupMembers\": [\r\n        {\r\n            \"name\": \"saman kuamara\",\r\n            \"email\": \"saman@gmail.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group/61542fd625c5fff85b02605b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group",
+						"61542fd625c5fff85b02605b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a group by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"group 5\",\r\n    \"description\": \"this is sample\",\r\n    \"groupMembers\": [\r\n        {\r\n            \"name\": \"saman kuamara\",\r\n            \"email\": \"saman@gmail.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/group/61542fd625c5fff85b02605b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"group",
+						"61542fd625c5fff85b02605b"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTUwM2JlN2U0Njc4NTE5YTExYTNkMGQiLCJlbWFpbCI6ImFnLm5heWFuYWppdGhAZ21haWwuY29tIiwiaWF0IjoxNjMzNDA1NTcwLCJleHAiOjE2MzM0MDkxNzB9.YzDxFSrHALTfv6ubGeqrQxYfT_IJUdEKvglgkwgdN8k",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
