@@ -3,7 +3,6 @@
 ## Team Management App
 
 - Leaders can create a team with multiple number of members.
-- Leaders can send emails and messages to his team members.
 - Leaders can view his all teams in one page, and he can view all the members by selecting a team.
 - Leaders and delete or update his team members.
 
