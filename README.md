@@ -16,6 +16,7 @@
 * express-jwt - jwt validation middleware.
 * express-validator - request data validation middleware.
 * jsonwebtoken - jwt token creation and etc.
+* postman - test APIs (please find postman collection)
 
 ## Environment Variables
 
